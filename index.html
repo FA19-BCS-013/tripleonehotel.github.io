@@ -30,16 +30,20 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="preloader.css" rel="stylesheet" type="text/css">
+    <!-- <script type="text/javascript" src="script.js"></script> -->
 </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
+<body onload="Stop()">
+    <div id="loader"><div id="loader"><div id="loader"></div></div></div>
+ 
+    <div class="container-xxxl bg-white p-0">
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div>
+        </div> -->
         <!-- Spinner End -->
 
         <!-- Header Start -->
@@ -179,13 +183,13 @@
                     <div class="col-lg-6">
                         <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
                         <h1 class="mb-4">Welcome to <span class="text-primary text-uppercase">TripleOne</span></h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                        <p class="mb-4">We ensure that each guest receives prompt, professional, friendly and courteous service. Our guiding principles underpin everything that we do on a daily basis, ensuring that we operate to the highest possible standards. The needs of our guests, associates and owners are in the forefront of everything we do. We aim to give our customers a pleasant, relaxing and memorable stay which makes them want ot come back.</p>
                         <div class="row g-3 pb-4">
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">50</h2>
                                         <p class="mb-0">Rooms</p>
                                     </div>
                                 </div>
@@ -194,7 +198,7 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">80</h2>
                                         <p class="mb-0">Staffs</p>
                                     </div>
                                 </div>
@@ -203,7 +207,7 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">1234</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">57891</h2>
                                         <p class="mb-0">Clients</p>
                                     </div>
                                 </div>
@@ -265,7 +269,7 @@
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="standard.html">View Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                 </div>
                             </div>
@@ -295,7 +299,7 @@
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="deluxe.html">View Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                 </div>
                             </div>
@@ -325,7 +329,7 @@
                                 </div>
                                 <p class="text-body mb-3">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet lorem.</p>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="">View Detail</a>
+                                    <a class="btn btn-sm btn-primary rounded py-2 px-4" href="executive.html">View Detail</a>
                                     <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">Book Now</a>
                                 </div>
                             </div>
@@ -509,6 +513,8 @@
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                         </div>
+                        <br>
+                    <p><img src="img/logo.png" width="50%" height="50%" ></p>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div class="row gy-5 g-4">
@@ -553,6 +559,12 @@
 
         
     </div>
+    <script>
+        var preloader = document.getElementById('loader');
+        function Stop(){
+            preloader.style.display='none';
+        }
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -568,6 +580,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
 </body>
 
 </html>
